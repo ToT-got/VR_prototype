@@ -1,0 +1,102 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+body {
+  position: fixed;
+  aspect-ratio: 16 / 9;
+  width: 99vw; /* 幅を基準にする（高さは自動で計算される） */
+  max-height: 99vh; /* 高さが画面を超えないようにする */
+  background-color: white;
+  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+}
+
+.noconectbg {
+  background: linear-gradient(90deg, #ff7e5f, #ff7e5f, #ff7e5f, #feb47b, #ff7e5f, #ff7e5f, #ff7e5f);
+  background-size: 300% 100%;
+  animation: slideGradient 10s linear infinite;
+}
+
+.yesconectbg {
+  background: linear-gradient(90deg, #7fb6f5, #7fb6f5, #7fb6f5, #7ff5b6, #7fb6f5, #7fb6f5, #7fb6f5);
+  background-size: 300% 100%;
+  animation: slideGradient 10s linear infinite;
+}
+
+@keyframes slideGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+}
+
+.connectImg {
+  position: fixed;
+  bottom: 0px;
+  width: 80px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: black;
+}
+
+.nav_conts {
+  position: fixed;
+  margin: 0 20px;
+  text-align: center;
+}
+.nav_quit {
+  top: 30px;
+  left: 20px;
+  padding: 10px 40px;
+  font-size: 20px;
+  background-color: red;
+}
+.nav_set {
+  top: 20px;
+  right: 20px;
+}
+.nav_set p {
+  position: relative;
+  bottom: 20px;
+}
+.mainStatusText {
+  text-align: center;
+}
