@@ -2,34 +2,43 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>VR - connected</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>接続 - スマホでVR</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body class="yesconectbg">
-    <a href="connect.html">
-    <header>
-      <nav>
-        <h1 class="mainStatusText_2">スマホでVR</h1>
-        <a href="index.html">
-          <div class="nav_quit nav_conts">
-            <p>切断する</p>
-          </div>
+
+  <body class="vr-app-body disconnected-state backcolor-b" oncontextmenu="return false;">
+    <header class="app-header">
+      <a href="index.html">
+      <div class="setudan">
+        <p>切断</p>
+      </div>
+      </a>
+      <nav class="main-nav">
+        <h1 class="app-title">スマホでVR</h1>
+        <a href="settings.html" class="nav-item settings-btn">
+          <img src="img/set_img.png" alt="設定アイコン" class="nav-icon">
+          <p class="nav-text">設定</p>
         </a>
-        <div class="nav_set nav_conts">
-          <img src="img/set_img.png" width="100" height="100">
-          <p>設定</p>
-        </div>
       </nav>
     </header>
 
-    <main>
-      <h1 class="mainStatusText">PCに接続されました！</h1>
+    <main class="main-content">
+      <a href="connect.html" class="main-a">
+      <div class="status-display">
+        <h2 id="connectionStatusText" class="status-message">PCに接続されました</h2>
+        <p class="instruction-text">接続されました。<br>本来はこのあと、VR画面の表示へ移動します。</p>
+      </div>
+      </a>
     </main>
 
-    <footer>
-      <img src="img/okConnect.png" class="connectImg">
+    <footer class="app-footer">
+      <div class="connection-image-wrapper">
+        <img src="img/okConnect.png" alt="接続の状態を示す画像" id="connectionImage" class="connection-image">
+      </div>
     </footer>
 
-    </a>
+    <script src="script.js"></script>
   </body>
 </html>
